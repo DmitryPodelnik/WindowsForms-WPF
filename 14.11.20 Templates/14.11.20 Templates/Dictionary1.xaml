@@ -1,0 +1,132 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:_14._11._20_Templates">
+
+    <ControlTemplate TargetType="{x:Type CheckBox}" x:Key="myCheckbox">
+        <StackPanel Orientation="Horizontal">
+            <Border x:Name="checkBoxOutBorder" CornerRadius="13" BorderBrush="#FF9A9A9A" BorderThickness="1"
+                    Background="#FFB7B5B5" Height="30" Width="75" >
+                <ContentControl x:Name="checkBoxOutContentControl" Margin="35,0,0,0"  HorizontalAlignment="Left"
+                            VerticalAlignment="Center" Content="OFF" Foreground="White"
+                            FontWeight="Bold" FontSize="13.5"/>
+            </Border>
+
+            <Border x:Name="checkBoxInnerBorder" Grid.Column="1" CornerRadius="13" BorderBrush="Gray" BorderThickness="0.5"
+                    Background="White" Height="26" Width="28" Margin="-119,0,0,0">
+
+            </Border>
+        </StackPanel>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter TargetName="checkBoxOutBorder" Property="Background" Value="LimeGreen"/>
+                <Setter TargetName="checkBoxOutContentControl" Property="Margin" Value="15,0,0,0" />
+                <Setter TargetName="checkBoxOutContentControl" Property="Content" Value="ON" />
+                <Setter TargetName="checkBoxInnerBorder" Property="Margin" Value="-32,0,0,0" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="{x:Type RadioButton}" x:Key="myRadioButton">
+        <StackPanel Orientation="Horizontal">
+            <Border x:Name="radioButtonOutBorder" CornerRadius="13" BorderBrush="#FF9A9A9A" BorderThickness="1"
+                    Background="#FFB7B5B5" Height="30" Width="75" >
+                <ContentControl x:Name="radioButtonOutContentControl" Margin="35,0,0,0"  HorizontalAlignment="Left"
+                            VerticalAlignment="Center" Content="OFF" Foreground="White"
+                            FontWeight="Bold" FontSize="13.5"/>
+            </Border>
+
+            <Border x:Name="radioButtonInnerBorder" Grid.Column="1" CornerRadius="13" BorderBrush="Gray" BorderThickness="0.5"
+                    Background="White" Height="26" Width="28" Margin="-119,0,0,0">
+
+            </Border>
+        </StackPanel>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter TargetName="radioButtonOutBorder" Property="Background" Value="LimeGreen"/>
+                <Setter TargetName="radioButtonOutContentControl" Property="Margin" Value="15,0,0,0" />
+                <Setter TargetName="radioButtonOutContentControl" Property="Content" Value="ON" />
+                <Setter TargetName="radioButtonInnerBorder" Property="Margin" Value="-32,0,0,0" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="SliderRepeatButton1" TargetType="RepeatButton">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="IsTabStop" Value="false" />
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Border Background="Gray" Height="3"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderRepeatButton2" TargetType="RepeatButton">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Border SnapsToDevicePixels="True" Background="LimeGreen" Height="3"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderThumb" TargetType="Thumb">
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Ellipse Height="30" Width="30" Fill="White" Stroke="Black" StrokeThickness="0.5"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate TargetType="Slider" x:Key="mySlider">
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" Name="column" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <RepeatButton Grid.Row="1" Grid.Column="0" x:Name="leftSunButton" Width="25" Height="25" 
+                              BorderBrush="Transparent" Background="Transparent"  Command="Slider.DecreaseSmall">
+                    <Image Source="sunButton.ico"></Image>
+                </RepeatButton>
+                <RepeatButton Grid.Row="1" Grid.Column="2" x:Name="rightSunButton" Width="30" Height="30" 
+                              BorderBrush="Transparent" Background="Transparent" Command="Slider.IncreaseSmall">
+                    <Image Source="SunButton.ico"></Image>
+                </RepeatButton>
+
+                <Track Grid.Row="1" Grid.Column="1" x:Name="PART_Track" Margin="8,0,8,0">
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton Style="{StaticResource SliderRepeatButton2}"  Command="Slider.DecreaseLarge" />
+                    </Track.DecreaseRepeatButton>
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource SliderThumb}"  />
+                    </Track.Thumb>
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton Style="{StaticResource SliderRepeatButton1}" Command="Slider.IncreaseLarge" />
+                    </Track.IncreaseRepeatButton>
+                </Track>
+            </Grid>
+        </Grid>
+
+
+    </ControlTemplate>
+
+
+</ResourceDictionary>

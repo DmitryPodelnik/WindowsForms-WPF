@@ -1,0 +1,118 @@
+﻿<Window x:Class="_03._11._20_Layout_panels.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03._11._20_Layout_panels"
+        mc:Ignorable="d"
+        Title="Calculator" MinHeight="500" Height="570" Width="440"  MinWidth="400" Icon="calc.ico" >
+    <Window.Resources>
+        <Style x:Key="NumberButtonStyle">
+            <Setter Property="Control.Margin" Value="5"></Setter>
+            <Setter Property="Control.Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#7FD4CFDD" Offset="0.485"/>
+                        <GradientStop Color="White" Offset="0"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsControl.Focusable" Value="False"></Setter>
+        </Style>
+        <Style x:Key="OperationButtonStyle">
+            <Setter Property="Control.Margin" Value="5"></Setter>
+            <Setter Property="Control.Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF2EFFD" Offset="0"/>
+                        <GradientStop Color="#FFF2EFFD" Offset="1"/>
+                        <GradientStop Color="#FFDFD8F4" Offset="0.495"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsControl.Focusable" Value="False"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="5">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,0.5" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FFF0C2F0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid x:Name="MainBody" Margin="10">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,0.5" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FFF0C2F0" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="41*"></RowDefinition>
+                <RowDefinition Height="94*"></RowDefinition>
+                <RowDefinition Height="66*"></RowDefinition>
+                <RowDefinition Height="66*"></RowDefinition>
+                <RowDefinition Height="66*"></RowDefinition>
+                <RowDefinition Height="66*"></RowDefinition>
+                <RowDefinition Height="66*"></RowDefinition>
+                <RowDefinition Height="66*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="2" Grid.Column="0" Margin="5,5.6,4.8,4.8">MC</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="2" Grid.Column="1" Margin="5.2,5.6,4.6,4.8">MR</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="2" Grid.Column="2" Margin="5.4,5.6,5.4,4.8">MS</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="2" Grid.Column="3" Margin="4.6,5.6,5.2,4.8">M+</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="2" Grid.Column="4" Margin="4.8,5.6,5,4.8">M-</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="3" Grid.Column="0" Margin="5,5.2,4.8,4.2">←</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="3" Grid.Column="1" Margin="5.2,5.2,4.6,4.2">CE</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="3" Grid.Column="2" Margin="5.4,5.2,5.4,4.2">C</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="3" Grid.Column="3" Margin="4.6,5.2,5.2,4.2">±</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="3" Grid.Column="4" Margin="4.8,5.2,5,4.2">√</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="4" Grid.Column="0" Margin="5,5.8,4.8,4.6">7</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="4" Grid.Column="1" Margin="5.2,5.8,4.6,4.6">8</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="4" Grid.Column="2" Margin="5.4,5.8,5.4,4.6">9</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="4" Grid.Column="3" Margin="4.6,5.8,5.2,4.6">/</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="4" Grid.Column="4" Margin="4.8,5.8,5,4.6">%</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="5" Grid.Column="0" Margin="5,5.4,4.8,4.2">4</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="5" Grid.Column="1" Margin="5.2,5.4,4.6,4.2">5</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="5" Grid.Column="2" Margin="5.4,5.4,5.4,4.2">6</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="5" Grid.Column="3" Margin="4.6,5.4,5.2,4.2">*</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="5" Grid.Column="4" Margin="4.8,5.4,5,4.2">1/x</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="6" Grid.Column="0" Margin="5,5.8,4.8,4.8">1</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="6" Grid.Column="1" Margin="5.2,5.8,4.6,4.8">2</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="6" Grid.Column="2" Margin="5.4,5.8,5.4,4.8">3</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="6" Grid.Column="3" Margin="4.6,5.8,5.2,4.8">-</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="6" Grid.Column="4" Grid.RowSpan="2" Margin="4.8,5.8,5,5.4">=</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5.2,4.6,5.4">0</Button>
+            <Button Style="{StaticResource NumberButtonStyle}" Grid.Row="7" Grid.Column="2" Margin="5.4,5.2,5.4,5.4">,</Button>
+            <Button Style="{StaticResource OperationButtonStyle}" Grid.Row="7" Grid.Column="3" Margin="4.6,5.2,5.2,5.4">+</Button>
+
+            <Border Grid.Row="1" Grid.ColumnSpan="5" BorderThickness="1" 
+                BorderBrush="Black"  Margin="5,2.2,5,4.4">
+                <TextBlock  Text="0" FontSize="50" x:Name="TextLabel" 
+                        TextAlignment="Right" Focusable="False" VerticalAlignment="Bottom" Padding="0,0,5,0"/>
+            </Border>
+
+        </Grid>
+        <Menu VerticalAlignment="Top" Grid.ColumnSpan="5" Height="25" FontSize="18" Panel.ZIndex="1">
+            <MenuItem Header="_Вид">
+                <Button></Button>
+            </MenuItem>
+            <MenuItem Header="_Правка">
+                <Button></Button>
+            </MenuItem>
+            <MenuItem Header="_Справка">
+                <Button></Button>
+            </MenuItem>
+        </Menu>
+    </Grid>
+
+</Window>

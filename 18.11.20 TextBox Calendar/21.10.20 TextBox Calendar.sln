@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21.10.20 TextBox Calendar", "21.10.20 TextBox Calendar\21.10.20 TextBox Calendar.csproj", "{C61C4E58-C58C-4EE1-83CF-068765679210}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C61C4E58-C58C-4EE1-83CF-068765679210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C61C4E58-C58C-4EE1-83CF-068765679210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C61C4E58-C58C-4EE1-83CF-068765679210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C61C4E58-C58C-4EE1-83CF-068765679210}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2A2366F-A44F-4BEE-9CBF-97100D78CAC6}
+	EndGlobalSection
+EndGlobal

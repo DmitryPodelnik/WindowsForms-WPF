@@ -1,0 +1,44 @@
+﻿<Window x:Class="_16._11._20_Task_Manager_Binding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_16._11._20_Task_Manager_Binding"
+        mc:Ignorable="d"
+        Title="Task Manager" Height="550" MinHeight="500" Width="600" Loaded="MainWindow_Loaded" Closing="MainWindow_Closing"
+        MinWidth="600" Icon="mainicon.png" WindowStartupLocation="Manual"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        >
+    <Window.Resources>
+        <local:EventInfo x:Key="eventInfo"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MaxWidth="200"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Calendar x:Name="mainCalendar" HorizontalAlignment="Left" Margin="10"
+                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                  SelectedDatesChanged="MainCalendar_SelectedDatesChanged"
+                  SelectedDate="{Binding SelecDate, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" IsTodayHighlighted="False"
+                  
+                  />
+        <ListBox x:Name="mainListBox" Grid.Column="1" Margin="0,0,10,0" 
+                 SelectionChanged="ListBox_SelectionChanged" 
+                 MouseDoubleClick="ListBoxItem_MouseDoubleClick" Cursor="Arrow" 
+                 IsSynchronizedWithCurrentItem="True">
+   
+        </ListBox>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name ="addEvent" Height ="30" Width="70" Margin="5,0,5,5" Click="Button_Click">+</Button>
+            <Button x:Name="deleteEvent" Height ="30" Width="70" Margin="5,0,20,5" Click="deleteEvent_Click">-</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

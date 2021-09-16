@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.11.20 Layout panels", "03.11.20 Layout panels\03.11.20 Layout panels.csproj", "{D53EA1EB-886A-4B1F-BE87-CFABF8B4A461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.11.20 File Explorer", "09.11.20 File Explorer\09.11.20 File Explorer.csproj", "{7A7F323B-9C6E-49BA-A501-98675C5B7055}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D53EA1EB-886A-4B1F-BE87-CFABF8B4A461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53EA1EB-886A-4B1F-BE87-CFABF8B4A461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53EA1EB-886A-4B1F-BE87-CFABF8B4A461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53EA1EB-886A-4B1F-BE87-CFABF8B4A461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A7F323B-9C6E-49BA-A501-98675C5B7055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A7F323B-9C6E-49BA-A501-98675C5B7055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A7F323B-9C6E-49BA-A501-98675C5B7055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A7F323B-9C6E-49BA-A501-98675C5B7055}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {623C78F5-8E4F-45DA-8D3D-8D6BFC793041}
+	EndGlobalSection
+EndGlobal

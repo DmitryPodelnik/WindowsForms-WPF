@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.11.20 Task Manager Binding", "16.11.20 Task Manager Binding\16.11.20 Task Manager Binding.csproj", "{DF85C245-3723-4353-9418-0AABC4DF02EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF85C245-3723-4353-9418-0AABC4DF02EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF85C245-3723-4353-9418-0AABC4DF02EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF85C245-3723-4353-9418-0AABC4DF02EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF85C245-3723-4353-9418-0AABC4DF02EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72787DB3-14C5-455F-8745-1993213C0376}
+	EndGlobalSection
+EndGlobal
